@@ -53,10 +53,8 @@ Write-Output "Restarting explorer"
 Start-Process "explorer.exe"
 
 Write-Output "Waiting for explorer to complete loading"
-Start-Sleep 10
+Start-Sleep 8
 
+#Had problems deleting leftovers, because permissions were required
 Write-Output "Removing additional OneDrive leftovers"
-foreach ($item in (Get-ChildItem "$env:WinDir\WinSxS\*onedrive*")) {
-    Takeown-Folder $item.FullName
-    Remove-Item -Recurse -Force $item.FullName
-}
+Remove-Item -path (Get-ChildItem "$env:WinDir\WinSxS\*onedrive*") -Recurse -Force

@@ -36,6 +36,10 @@ you'll probably want the most recent version anyway.
 
 ## Execution
 
+To set the ExecutionPolicy, and unblock the scripts, run the batch file
+'ExecutionPolicy.bat' in the folder, or do it manually by following
+the steps below:
+
 Enable execution of PowerShell scripts:
 
     PS> Set-ExecutionPolicy Unrestricted

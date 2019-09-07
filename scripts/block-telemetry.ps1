@@ -186,12 +186,12 @@ $domains = @(
     "m.hotmail.com"
 
     # can cause issues with Skype (#79) or other services (#171)
-    "apps.skype.com"
-    "c.msn.com"
+    #"apps.skype.com"
+    #"c.msn.com"
     # "login.live.com"                  # prevents login to outlook and other live apps
-    "pricelist.skype.com"
-    "s.gateway.messenger.live.com"
-    "ui.skype.com"
+    #"pricelist.skype.com"
+    #"s.gateway.messenger.live.com"
+    #"ui.skype.com"
 )
 Write-Output "" | Out-File -Encoding ASCII -Append $hosts_file
 foreach ($domain in $domains) {
@@ -211,7 +211,7 @@ $ips = @(
     "204.79.197.200"
     "23.218.212.69"
     "65.39.117.230"
-    "65.52.108.33"   # Causes problems with Microsoft Store
+    #"65.52.108.33"   # Causes problems with Microsoft Store
     "65.55.108.23"
     "64.4.54.254"
 )
